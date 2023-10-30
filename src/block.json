@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/wp-latest-post-block",
+	"version": "0.1.0",
+	"title": "Wp Listing Post Block",
+	"category": "widgets",
+	"icon": "admin-post",
+	"description": "Gutenberg Block to list posts with additional features.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "latest-posts",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"numberOfPosts":{
+			"type" : "number",
+			"default":5
+		},
+		"displayFeaturedImage" : {
+			"type" : "boolean",
+			"default":true
+		},
+		"order":{
+			"type" :"string",
+			"default" : "desc"
+		},
+		"orderBy":{
+			"type" :"string",
+			"default" : "date"
+		},
+		"categories":{
+			"type" :"array",
+			"items" : {
+				"type" :"object"
+			}
+		}
+	}
+}
